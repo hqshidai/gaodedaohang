@@ -68,7 +68,7 @@ reference=named_place:location|*,rule-named-place,?|指定地点查询|#visitorn
 reference=along_the_site|*,rule-along-the-site,?|沿线一级地点查询|#visitorname[]。=+%一级地点
 reference=distance_surplus|*,rule-distance-surplus,?|剩余距离|#visitorname[]。
 reference=distance_time|*,rule-distance-time,?|剩余时间|#visitorname[]。
-reference=within_arrive_whethernumber|*,rule-within-arrive-whether,?|指定时间内能否到达|#visitorname[]。
+reference=within_arrive_whether:number|*,rule-within-arrive-whether,?|指定时间内能否到达|#visitorname[]。
 reference=time_unit|*,rule-time-unit,?|时间单位|#visitorname[]。=+%时间单位
 reference=cost|*,rule-find-cost,?|所需费用|#visitorname[]。
 reference=traffic_light_num|*,rule-traffic-light-num,?|红绿灯数量|#visitorname[]。
@@ -85,10 +85,14 @@ reference=province|*,rule-province,?|省份|#visitorname[]。=+%省份
 reference=license_num|*,rule-license-num,?|号码|#visitorname[]。
 reference=base_location:location|*,rule-base-location,?|基准地址|#visitorname[]。
 reference=neg_base_location:location|*,rule-neg-base-location,?|否定基准地址|#visitorname[]。
-reference=first_kind_location:location|*,rule-first-kind-location,?|查询周边一级地点|#visitorname[]。=+%一级地点
-reference=neg_first_kind_location:location|*,rule-neg-first-kind-location,?|否定查询周边一级地点|#visitorname[]。=+%一级地点
-reference=second_kind_location:location|*,rule-second-kind-location,?|查询周边二级地点|#visitorname[]。=+%二级地点
-reference=neg_second_kind_location:location|*,rule-neg-second-kind-location,?|否定查询周边二级地点|#visitorname[]。=+%二级地点
+reference=first_kind_location:location|*,rule-first-kind-location,?|查询周边一级地点1|#visitorname[]。=+%一级地点
+reference=neg_first_kind_location:location|*,rule-neg-first-kind-location,?|否定查询周边一级地点1|#visitorname[]。=+%一级地点
+reference=second_kind_location:location|*,rule-second-kind-location,?|查询周边二级地点1|#visitorname[]。=+%二级地点
+reference=neg_second_kind_location:location|*,rule-neg-second-kind-location,?|否定查询周边二级地点1|#visitorname[]。=+%二级地点
+reference=first_kind_location_2:location|*,rule-first-kind-location-2,?|查询周边一级地点2|#visitorname[]。=+%一级地点
+reference=neg_first_kind_location_2:location|*,rule-neg-first-kind-location-2,?|否定查询周边一级地点2|#visitorname[]。=+%一级地点
+reference=second_kind_location_2:location|*,rule-second-kind-location-2,?|查询周边二级地点2|#visitorname[]。=+%二级地点
+reference=neg_second_kind_location_2:location|*,rule-neg-second-kind-location-2,?|否定查询周边二级地点2|#visitorname[]。=+%二级地点
 reference=distance_belownumber|*,rule-distance-below,?|距离以内|#visitorname[]。
 reference=distance_abovenumber|*,rule-distance-above,?|距离以外|#visitorname[]。
 reference=distance_unit|*,rule-distance-unit,?|距离单位1|#visitorname[]。=+%距离单位
@@ -102,7 +106,7 @@ reference=want_numnumber|*,rule-want-num,?|第几个|#visitorname[]。
 reference=neg_want_numnumber|*,rule-neg-want-num,?|不要第几个|#visitorname[]。
 reference=travel_intention|*,rule-travel-intention,?|出行意图|#visitorname[]。
 reference=obscure_confirm|*,rule-obscure-confirm,?|确认下一步|#visitorname[]。
-reference=start_navigation|*,rule-start-navigation,?|开启导航|#visitorname[]。
+reference=start_navigation|*,rule-start-navigation,?|开启导航|#visitorname[]。=+导航+none
 reference=single_change_intention|*,rule-single-change-intention,?|单个更换意图|#visitorname[]。
 reference=batch_change_intention|*,rule-batch-change-intention,?|批量更换意图|#visitorname[]。
 reference=change_by|*,rule-change-by,?|更换类别|#visitorname[]。=+%类别集
@@ -222,6 +226,10 @@ process=nextStep=first_kind_location|ask_first_kind_location=clear_active|
 process=nextStep=neg_first_kind_location|ask_neg_first_kind_location=clear_active|
 process=nextStep=second_kind_location|ask_second_kind_location=clear_active|
 process=nextStep=neg_second_kind_location|ask_neg_second_kind_location=clear_active|
+process=nextStep=first_kind_location_2|ask_first_kind_location_2=clear_active|
+process=nextStep=neg_first_kind_location_2|ask_neg_first_kind_location_2=clear_active|
+process=nextStep=second_kind_location_2|ask_second_kind_location_2=clear_active|
+process=nextStep=neg_second_kind_location_2|ask_neg_second_kind_location_2=clear_active|
 process=nextStep=distance_below|ask_distance_below=clear_active|
 process=nextStep=distance_above|ask_distance_above=clear_active|
 process=nextStep=distance_unit|ask_distance_unit=clear_active|
@@ -338,7 +346,7 @@ reference=named_place:location|*,rule-named-place,?|指定地点查询|#visitorn
 reference=along_the_site|*,rule-along-the-site,?|沿线一级地点查询|#visitorname[]。=+%一级地点
 reference=distance_surplus|*,rule-distance-surplus,?|剩余距离|#visitorname[]。
 reference=distance_time|*,rule-distance-time,?|剩余时间|#visitorname[]。
-reference=within_arrive_whethernumber|*,rule-within-arrive-whether,?|指定时间内能否到达|#visitorname[]。
+reference=within_arrive_whether:number|*,rule-within-arrive-whether,?|指定时间内能否到达|#visitorname[]。
 reference=time_unit|*,rule-time-unit,?|时间单位|#visitorname[]。=+%时间单位
 reference=cost|*,rule-find-cost,?|所需费用|#visitorname[]。
 reference=traffic_light_num|*,rule-traffic-light-num,?|红绿灯数量|#visitorname[]。
@@ -355,10 +363,14 @@ reference=province|*,rule-province,?|省份|#visitorname[]。=+%省份
 reference=license_num|*,rule-license-num,?|号码|#visitorname[]。
 reference=base_location:location|*,rule-base-location,?|基准地址|#visitorname[]。
 reference=neg_base_location:location|*,rule-neg-base-location,?|否定基准地址|#visitorname[]。
-reference=first_kind_location:location|*,rule-first-kind-location,?|查询周边一级地点|#visitorname[]。=+%一级地点
-reference=neg_first_kind_location:location|*,rule-neg-first-kind-location,?|否定查询周边一级地点|#visitorname[]。=+%一级地点
-reference=second_kind_location:location|*,rule-second-kind-location,?|查询周边二级地点|#visitorname[]。=+%二级地点
-reference=neg_second_kind_location:location|*,rule-neg-second-kind-location,?|否定查询周边二级地点|#visitorname[]。=+%二级地点
+reference=first_kind_location:location|*,rule-first-kind-location,?|查询周边一级地点1|#visitorname[]。=+%一级地点
+reference=neg_first_kind_location:location|*,rule-neg-first-kind-location,?|否定查询周边一级地点1|#visitorname[]。=+%一级地点
+reference=second_kind_location:location|*,rule-second-kind-location,?|查询周边二级地点1|#visitorname[]。=+%二级地点
+reference=neg_second_kind_location:location|*,rule-neg-second-kind-location,?|否定查询周边二级地点1|#visitorname[]。=+%二级地点
+reference=first_kind_location_2:location|*,rule-first-kind-location-2,?|查询周边一级地点2|#visitorname[]。=+%一级地点
+reference=neg_first_kind_location_2:location|*,rule-neg-first-kind-location-2,?|否定查询周边一级地点2|#visitorname[]。=+%一级地点
+reference=second_kind_location_2:location|*,rule-second-kind-location-2,?|查询周边二级地点2|#visitorname[]。=+%二级地点
+reference=neg_second_kind_location_2:location|*,rule-neg-second-kind-location-2,?|否定查询周边二级地点2|#visitorname[]。=+%二级地点
 reference=distance_belownumber|*,rule-distance-below,?|距离以内|#visitorname[]。
 reference=distance_abovenumber|*,rule-distance-above,?|距离以外|#visitorname[]。
 reference=distance_unit|*,rule-distance-unit,?|距离单位1|#visitorname[]。=+%距离单位
@@ -372,7 +384,7 @@ reference=want_numnumber|*,rule-want-num,?|第几个|#visitorname[]。
 reference=neg_want_numnumber|*,rule-neg-want-num,?|不要第几个|#visitorname[]。
 reference=travel_intention|*,rule-travel-intention,?|出行意图|#visitorname[]。
 reference=obscure_confirm|*,rule-obscure-confirm,?|确认下一步|#visitorname[]。
-reference=start_navigation|*,rule-start-navigation,?|开启导航|#visitorname[]。
+reference=start_navigation|*,rule-start-navigation,?|开启导航|#visitorname[]。=+导航+none
 reference=single_change_intention|*,rule-single-change-intention,?|单个更换意图|#visitorname[]。
 reference=batch_change_intention|*,rule-batch-change-intention,?|批量更换意图|#visitorname[]。
 reference=change_by|*,rule-change-by,?|更换类别|#visitorname[]。=+%类别集
@@ -492,6 +504,10 @@ process=nextStep=first_kind_location|ask_first_kind_location=clear_active|
 process=nextStep=neg_first_kind_location|ask_neg_first_kind_location=clear_active|
 process=nextStep=second_kind_location|ask_second_kind_location=clear_active|
 process=nextStep=neg_second_kind_location|ask_neg_second_kind_location=clear_active|
+process=nextStep=first_kind_location_2|ask_first_kind_location_2=clear_active|
+process=nextStep=neg_first_kind_location_2|ask_neg_first_kind_location_2=clear_active|
+process=nextStep=second_kind_location_2|ask_second_kind_location_2=clear_active|
+process=nextStep=neg_second_kind_location_2|ask_neg_second_kind_location_2=clear_active|
 process=nextStep=distance_below|ask_distance_below=clear_active|
 process=nextStep=distance_above|ask_distance_above=clear_active|
 process=nextStep=distance_unit|ask_distance_unit=clear_active|
@@ -1129,7 +1145,7 @@ status=listening
 style=multimatchvalues
 conflict=main_httppost,ask_within_arrive_whether
 fellow=select_by_additional_httppost
-condition=within_arrive_whethernumber|*,rule-within-arrive-whether,?|指定时间内能否到达|#visitorname[]。
+condition=within_arrive_whether:number|*,rule-within-arrive-whether,?|指定时间内能否到达|#visitorname[]。
 process=completed=true|select_by_additional_httppost=active|
 
 name=change_time_unit
@@ -1282,7 +1298,7 @@ status=listening
 style=multimatchvalues
 conflict=main_httppost,ask_first_kind_location
 fellow=select_by_additional_httppost
-condition=first_kind_location:location|*,rule-first-kind-location,?|查询周边一级地点|#visitorname[]。=+%一级地点
+condition=first_kind_location:location|*,rule-first-kind-location,?|查询周边一级地点1|#visitorname[]。=+%一级地点
 process=completed=true|select_by_additional_httppost=active|
 
 name=change_neg_first_kind_location
@@ -1291,7 +1307,7 @@ status=listening
 style=multimatchvalues
 conflict=main_httppost,ask_neg_first_kind_location
 fellow=select_by_additional_httppost
-condition=neg_first_kind_location:location|*,rule-neg-first-kind-location,?|否定查询周边一级地点|#visitorname[]。=+%一级地点
+condition=neg_first_kind_location:location|*,rule-neg-first-kind-location,?|否定查询周边一级地点1|#visitorname[]。=+%一级地点
 process=completed=true|select_by_additional_httppost=active|
 
 name=change_second_kind_location
@@ -1300,7 +1316,7 @@ status=listening
 style=multimatchvalues
 conflict=main_httppost,ask_second_kind_location
 fellow=select_by_additional_httppost
-condition=second_kind_location:location|*,rule-second-kind-location,?|查询周边二级地点|#visitorname[]。=+%二级地点
+condition=second_kind_location:location|*,rule-second-kind-location,?|查询周边二级地点1|#visitorname[]。=+%二级地点
 process=completed=true|select_by_additional_httppost=active|
 
 name=change_neg_second_kind_location
@@ -1309,7 +1325,43 @@ status=listening
 style=multimatchvalues
 conflict=main_httppost,ask_neg_second_kind_location
 fellow=select_by_additional_httppost
-condition=neg_second_kind_location:location|*,rule-neg-second-kind-location,?|否定查询周边二级地点|#visitorname[]。=+%二级地点
+condition=neg_second_kind_location:location|*,rule-neg-second-kind-location,?|否定查询周边二级地点1|#visitorname[]。=+%二级地点
+process=completed=true|select_by_additional_httppost=active|
+
+name=change_first_kind_location_2
+action=select
+status=listening
+style=multimatchvalues
+conflict=main_httppost,ask_first_kind_location_2
+fellow=select_by_additional_httppost
+condition=first_kind_location_2:location|*,rule-first-kind-location-2,?|查询周边一级地点2|#visitorname[]。=+%一级地点
+process=completed=true|select_by_additional_httppost=active|
+
+name=change_neg_first_kind_location_2
+action=select
+status=listening
+style=multimatchvalues
+conflict=main_httppost,ask_neg_first_kind_location_2
+fellow=select_by_additional_httppost
+condition=neg_first_kind_location_2:location|*,rule-neg-first-kind-location-2,?|否定查询周边一级地点2|#visitorname[]。=+%一级地点
+process=completed=true|select_by_additional_httppost=active|
+
+name=change_second_kind_location_2
+action=select
+status=listening
+style=multimatchvalues
+conflict=main_httppost,ask_second_kind_location_2
+fellow=select_by_additional_httppost
+condition=second_kind_location_2:location|*,rule-second-kind-location-2,?|查询周边二级地点2|#visitorname[]。=+%二级地点
+process=completed=true|select_by_additional_httppost=active|
+
+name=change_neg_second_kind_location_2
+action=select
+status=listening
+style=multimatchvalues
+conflict=main_httppost,ask_neg_second_kind_location_2
+fellow=select_by_additional_httppost
+condition=neg_second_kind_location_2:location|*,rule-neg-second-kind-location-2,?|否定查询周边二级地点2|#visitorname[]。=+%二级地点
 process=completed=true|select_by_additional_httppost=active|
 
 name=change_distance_below
@@ -1435,7 +1487,7 @@ status=listening
 style=multimatchvalues
 conflict=main_httppost,ask_start_navigation
 fellow=select_by_additional_httppost
-condition=start_navigation|*,rule-start-navigation,?|开启导航|#visitorname[]。
+condition=start_navigation|*,rule-start-navigation,?|开启导航|#visitorname[]。=+导航+none
 process=completed=true|select_by_additional_httppost=active|
 
 name=change_single_change_intention
@@ -2027,7 +2079,7 @@ action=select
 status=waiting
 style=multimatchvalues
 fellow=select_by_additional_httppost
-condition=within_arrive_whethernumber|*,rule-within-arrive-whether,?|指定时间内能否到达|#visitorname[]。
+condition=within_arrive_whether:number|*,rule-within-arrive-whether,?|指定时间内能否到达|#visitorname[]。
 process=completed=true|select_by_additional_httppost=active|
 
 name=ask_time_unit
@@ -2163,7 +2215,7 @@ action=select
 status=waiting
 style=multimatchvalues
 fellow=select_by_additional_httppost
-condition=first_kind_location:location|*,rule-first-kind-location,?|查询周边一级地点|#visitorname[]。=+%一级地点
+condition=first_kind_location:location|*,rule-first-kind-location,?|查询周边一级地点1|#visitorname[]。=+%一级地点
 process=completed=true|select_by_additional_httppost=active|
 
 name=ask_neg_first_kind_location
@@ -2171,7 +2223,7 @@ action=select
 status=waiting
 style=multimatchvalues
 fellow=select_by_additional_httppost
-condition=neg_first_kind_location:location|*,rule-neg-first-kind-location,?|否定查询周边一级地点|#visitorname[]。=+%一级地点
+condition=neg_first_kind_location:location|*,rule-neg-first-kind-location,?|否定查询周边一级地点1|#visitorname[]。=+%一级地点
 process=completed=true|select_by_additional_httppost=active|
 
 name=ask_second_kind_location
@@ -2179,7 +2231,7 @@ action=select
 status=waiting
 style=multimatchvalues
 fellow=select_by_additional_httppost
-condition=second_kind_location:location|*,rule-second-kind-location,?|查询周边二级地点|#visitorname[]。=+%二级地点
+condition=second_kind_location:location|*,rule-second-kind-location,?|查询周边二级地点1|#visitorname[]。=+%二级地点
 process=completed=true|select_by_additional_httppost=active|
 
 name=ask_neg_second_kind_location
@@ -2187,7 +2239,39 @@ action=select
 status=waiting
 style=multimatchvalues
 fellow=select_by_additional_httppost
-condition=neg_second_kind_location:location|*,rule-neg-second-kind-location,?|否定查询周边二级地点|#visitorname[]。=+%二级地点
+condition=neg_second_kind_location:location|*,rule-neg-second-kind-location,?|否定查询周边二级地点1|#visitorname[]。=+%二级地点
+process=completed=true|select_by_additional_httppost=active|
+
+name=ask_first_kind_location_2
+action=select
+status=waiting
+style=multimatchvalues
+fellow=select_by_additional_httppost
+condition=first_kind_location_2:location|*,rule-first-kind-location-2,?|查询周边一级地点2|#visitorname[]。=+%一级地点
+process=completed=true|select_by_additional_httppost=active|
+
+name=ask_neg_first_kind_location_2
+action=select
+status=waiting
+style=multimatchvalues
+fellow=select_by_additional_httppost
+condition=neg_first_kind_location_2:location|*,rule-neg-first-kind-location-2,?|否定查询周边一级地点2|#visitorname[]。=+%一级地点
+process=completed=true|select_by_additional_httppost=active|
+
+name=ask_second_kind_location_2
+action=select
+status=waiting
+style=multimatchvalues
+fellow=select_by_additional_httppost
+condition=second_kind_location_2:location|*,rule-second-kind-location-2,?|查询周边二级地点2|#visitorname[]。=+%二级地点
+process=completed=true|select_by_additional_httppost=active|
+
+name=ask_neg_second_kind_location_2
+action=select
+status=waiting
+style=multimatchvalues
+fellow=select_by_additional_httppost
+condition=neg_second_kind_location_2:location|*,rule-neg-second-kind-location-2,?|否定查询周边二级地点2|#visitorname[]。=+%二级地点
 process=completed=true|select_by_additional_httppost=active|
 
 name=ask_distance_below
@@ -2299,7 +2383,7 @@ action=select
 status=waiting
 style=multimatchvalues
 fellow=select_by_additional_httppost
-condition=start_navigation|*,rule-start-navigation,?|开启导航|#visitorname[]。
+condition=start_navigation|*,rule-start-navigation,?|开启导航|#visitorname[]。=+导航+none
 process=completed=true|select_by_additional_httppost=active|
 
 name=ask_single_ask_intention
